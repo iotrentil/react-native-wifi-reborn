@@ -59,7 +59,7 @@ RCT_EXPORT_METHOD(connectToSSID:(NSString*)ssid
 RCT_EXPORT_METHOD(connectToSSIDPrefix:(NSString*)ssid
                    resolver:(RCTPromiseResolveBlock)resolve
                    rejecter:(RCTPromiseRejectBlock)reject) {
-
+/*
      if (@available(iOS 13.0, *)) {
          NEHotspotConfiguration* configuration = [[NEHotspotConfiguration alloc] initWithSSIDPrefix:ssid];
          configuration.joinOnce = false;
@@ -75,6 +75,8 @@ RCT_EXPORT_METHOD(connectToSSIDPrefix:(NSString*)ssid
      } else {
          reject(@"ios_error", @"Not supported in iOS<13.0", nil);
      }
+*/
+     reject(@"ios_error", @"Not supported in iOS<13.0", nil);
  }
 
 RCT_EXPORT_METHOD(connectToProtectedSSIDPrefix:(NSString*)ssid
@@ -82,7 +84,7 @@ RCT_EXPORT_METHOD(connectToProtectedSSIDPrefix:(NSString*)ssid
                   isWEP:(BOOL)isWEP
                   resolver:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject) {
-
+/*
     if (@available(iOS 13.0, *)) {
         NEHotspotConfiguration* configuration = [[NEHotspotConfiguration alloc] initWithSSIDPrefix:ssid passphrase:passphrase isWEP:isWEP];
         configuration.joinOnce = true;
@@ -98,6 +100,8 @@ RCT_EXPORT_METHOD(connectToProtectedSSIDPrefix:(NSString*)ssid
     } else {
         reject(@"ios_error", @"Not supported in iOS<13.0", nil);
     }
+*/
+    reject(@"ios_error", @"Not supported in iOS<13.0", nil);
 }
 
 RCT_EXPORT_METHOD(connectToProtectedSSID:(NSString*)ssid
